@@ -1,0 +1,7 @@
+pl\umcs\services\EmployeeService.class
+pl\umcs\ClientBasicController.class
+pl\umcs\ClientMainApp.class
+pl\umcs\repositories\AssignmentRepository.class
+pl\umcs\repositories\EmployeeFakeRepository.class
+pl\umcs\repositories\EmployeeRepository.class
+pl\umcs\repositories\HolidayRepository.class
