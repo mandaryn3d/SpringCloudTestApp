@@ -48,13 +48,15 @@ public class CheckerController {
         Application clientApplication
                 = eurekaClient.getApplication("client");
 
+        //restTemplate.getForObject(getUrl(clientApplication, defaultNamePath + "/fill"), String.class);
+
         ResponseEntity<Employee> steve = restTemplate.getForEntity(getUrl(clientApplication, defaultNamePath+"/1"), Employee.class);
         Holiday holidayForSteve = new Holiday();
 
         holidayForSteve.setEmployee(steve.getBody());
         holidayForSteve.setLength(7);
         holidayForSteve.setStartDate(new Date(2018, 12, 22));
-        ResponseEntity<String> newSteve = restTemplate.postForEntity(getUrl(clientApplication, defaultNamePath),holidayForSteve,String.class);
+        ResponseEntity<String> newSteve = restTemplate.postForEntity(getUrl(clientApplication, defaultNamePath+"/holiday"),holidayForSteve,String.class);
         return "Some holidays were requested for " + newSteve.getBody();
     }
 

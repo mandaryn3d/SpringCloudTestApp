@@ -88,8 +88,8 @@ public class ClientBasicController
         return updatedEmployee;
     }
 
-    @PostMapping(consumes = APPLICATION_JSON_VALUE)
-    public String requestHoliday(Holiday request) {
+    @PostMapping("/holiday")
+    public String requestHoliday(@RequestBody Holiday request) {
         Employee requestingEmployee = employeeService.find(request.getEmployee().getId());
         if (null != requestingEmployee) {
             List<Holiday> holidays = requestingEmployee.getHolidayList();
@@ -104,8 +104,9 @@ public class ClientBasicController
         }
         return "Employee not found";
     }
-    @PostMapping(consumes = APPLICATION_JSON_VALUE)
-    public String logWork(Assignment assignment) {
+    /*
+    @PostMapping
+    public String logWork(@RequestBody Assignment assignment) {
         Employee requestingEmployee = employeeService.find(assignment.getEmployee().getId());
         if (null != requestingEmployee) {
             List<Assignment> assignments = requestingEmployee.getAssignmentList();
@@ -119,7 +120,7 @@ public class ClientBasicController
             log.info("Bad request. Employee: " + assignment.getEmployee().getId() + "not found.");
         }
         return "Employee not found";
-    }
+    }*/
 
     @GetMapping("/fill")
     public String fillWithData() {

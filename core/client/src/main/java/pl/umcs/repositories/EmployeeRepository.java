@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import pl.umcs.datatypes.Employee;
 
 @Repository
-public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
 
 }

@@ -17,7 +17,7 @@ public class Holiday {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "employee_id")
+    //@JoinColumn(name = "employee_id")
     private Employee employee;
 
     public Long getId() {
