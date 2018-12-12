@@ -1,0 +1,16 @@
+{
+  "id" : "c3d04a02-2426-4e7a-b024-7fef3c58beb0",
+  "request" : {
+    "url" : "/hello",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "Hello. This is bank.",
+    "headers" : {
+      "Content-Type" : "text/plain;charset=ISO-8859-1"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "c3d04a02-2426-4e7a-b024-7fef3c58beb0"
+}
